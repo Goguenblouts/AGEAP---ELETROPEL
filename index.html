@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Empresa Destaque AGEAP 2023</title>
+</head>
+
+<style>
+    body {
+        background-color: #660000;
+        color: #fecb00;
+    }
+
+    h1 {
+        text-shadow: 0 3px #1d201e;
+        text-align: center;
+        font-family: Bristol maver, sans-serif;
+        letter-spacing: 5px;
+        font-size: 80px;
+    }
+
+    p {
+        text-align: center;
+        font-size: 50px;
+        color: #ffffff;
+    }
+
+    .foto {
+        width: 300px;
+        height: auto;
+        margin: 10px;
+    }
+
+    .foto-container {
+        text-align: center;
+        padding: 30px;
+    }
+
+    .download-link {
+        display: block;
+        color: #000000;
+        background-color: #fecb00;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 40px;
+    }
+
+    .download-link:hover {
+        background-color: #555;
+    }
+
+    .galeria-de-fotos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+</style>
+
+<body>
+    <h1>Empresa Destaque Ageap 2023</h1>
+    <p>Convidados Eletropel Distribuidora</p>
+
+    <div class="galeria-de-fotos" id="galeria-de-fotos">
+    </div>
+
+    <script>
+        const nomesFotos = [
+        "1° PREMIAÇÃO (1).jpg", "1° PREMIAÇÃO (2).jpg", "2ª PREMIAÇÃO.jpg", "2º PREMIAÇÃO (1).jpg", "2º PREMIAÇÃO (2).jpg", "2º PREMIAÇÃO (3).jpg", 
+        "2º PREMIAÇÃO (4).jpg","2º PREMIAÇÃO (5).jpg", "BRUNO & FAUTINO (2).jpg", "DIV.jpg", "EM, EUR E LU (1).jpg", "EM, EUR E LU (2).jpg", "EM, EUR E LU (3).jpg", 
+        "EMÍLIO (1).jpg", "EMÍLIO (2).jpg", "EUR & TATI (1).jpg", "EUR & TATI (2).jpg", "EUR & TATI (3).jpg", "EUR, TATI & LU (1).jpg", "EUR, TATI & LU (2).jpg", 
+        "EUR, TATI & LU (3).jpg", "EURICO & ESPOSA (1).jpg", "EURICO & ESPOSA (2).jpg", "EURICO (1).jpg", "EURICO (2).jpg", "EURICO (3).jpg", "EURICO (4).jpg", 
+        "FAB, BRU, EUR & FAUS (1).jpg", "FAB, BRU, EUR & FAUS (2).jpg", "FAUS & EUR (1).jpg", "FAUS & EUR (2).jpg", "FAUS & EUR (3).jpg", "FAUS & LU (1).jpg", 
+        "FAUS & LU (2).jpg", "FAUS & TATI (1).jpg", "FAUS & TATI (2).jpg", "FAUS & TATI (3).jpg", "FAUS & TATI (4).jpg", "FAUS, TATI & LU (1).jpg", "FAUS, TATI & LU (2).jpg", 
+        "FAUS, TATI & LU (3).jpg", "GRUPO (1).jpg", "GRUPO (2).jpg", "GRUPO (3).jpg", "GRUPO (4).jpg", "HITALO (1).jpg", "HITALO (10).jpg", "HITALO (11).jpg", "HITALO (12).jpg", 
+        "HITALO (2).jpg", "HITALO (3).jpg", "HITALO (4).jpg", "HITALO (5).jpg", "HITALO (6).jpg", "HITALO (7).jpg", "HITALO (8).jpg", "HITALO (9).jpg", "IMG (3).jpg", "IMG (4).jpg", 
+        "IMG (5).jpg", "LAI, EUR E TATI (1).jpg", "LAI, EUR E TATI (2).jpg", "LAI, EUR E TATI (3).jpg", "LAI, LIV, FAB & TATI (1).jpg", "LAI, LIV, FAB & TATI (2).jpg", 
+        "LAI, LIV, FAB & TATI (3).jpg", "LAIS & ALLAN.jpg", "LIV, FAUS E FAB (1).jpg", "LIV, FAUS E FAB (2).jpg", "LUIZ & ESPOSA (1).jpg", "LUIZ & ESPOSA (2).jpg", 
+        "LUIZ & ESPOSA (3).jpg", "MARCELIO & TATIANA (1).jpg", "MARCELIO & TATIANA (2).jpg", "MARCELIO & TATIANA (3).jpg", "MÁRCELIO (1).jpg", "MÁRCELIO (2).jpg",
+        "OS CARA (1).jpg", "OS CARA (2).jpg", "OS CARAS.jpg", "PÓS TROFEU (1).jpg", "PÓS TROFEU (2).jpg", "PÓS TROFEU (3).jpg", "SANTIAGO (1).jpg", "SANTIAGO (2).jpg", "SANTIAGO (3).jpg",
+
+        ];
+
+        const galeriaFotos = document.getElementById('galeria-de-fotos');
+
+        for (let i = 0; i < nomesFotos.length; i++) {
+    const fotoContainer = document.createElement('div');
+    fotoContainer.className = 'foto-container';
+
+    const img = document.createElement('img');
+    img.src = `https://github.com/Goguenblouts/AGEAP-ELETROPEL/raw/main/${nomesFotos[i]}`;
+    img.alt = `Foto ${i + 1}`;
+    img.className = 'foto';
+
+    const linkDownload = document.createElement('a');
+    linkDownload.href = `https://github.com/Goguenblouts/AGEAP-ELETROPEL/raw/main/${nomesFotos[i]}`;
+    linkDownload.textContent = `Download Foto`;
+    linkDownload.setAttribute('download', `Foto${i + 1}.jpg`);
+    linkDownload.className = 'download-link';
+
+    fotoContainer.appendChild(img);
+    fotoContainer.appendChild(linkDownload);
+
+    galeriaFotos.appendChild(fotoContainer);
+}
+
+    </script>
+</body>
+</html>
